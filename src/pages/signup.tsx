@@ -17,7 +17,6 @@ export default function Signup() {
 
       try {
          const response = await signup({ ...signupValues }).unwrap();
-         console.log(response);
          if (response.success) navigate(navigateTo, { replace: true });
          else window.alert(response.message);
       } catch (err: any) {
